@@ -1,17 +1,25 @@
-= sex_it_up
+== Description
+Turn your boring "Lorem ipsum" website and placeholder images into a beautiful display of artwork.
 
-Description goes here.
+== View Helper
+# Searches wikimedia for passed in term.  Caches all initial results.
+#  As you search through results, image files will generally follow the form e.g. "File:<image name>.jpg - Wikimedia Commons"
+# Retains the original image and will generate scaled versions based on coordinates passed in
+# Allow for an optional watermark that defaults to the text "Placeholder"
+sexy_image('dogs', :width => 100, :height => 100)
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
 
+== Model
+# If you want to replace your boring user place holder image, you can do the following
+user.icon = SexItUp.sexy_image(['flowers','stars','butterflies'], :width => 75, :height => 75)
+
+== Rake Task
+# The inital caching of images for a given term may be slow (hence causing your initial page view to be slow), so you can "pre-warm" the image
+#  cache for a given search term by using the following rake task.
+rake sex_it_up:cache butterflies
+
+# Show Lovdbyless or some other social site with a before (with boring placeholders) and after (with exciting images)
+# Show a screenshot of a sample site with the Lorem text and placeholder images
 == Copyright
 
 Copyright (c) 2010 Jim Jones. See LICENSE for details.
