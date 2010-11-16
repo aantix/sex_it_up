@@ -1,4 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+#require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+ROOT_DIR = `pwd`.strip unless defined? ROOT_DIR
+puts "ROOT = #{ROOT_DIR}"
+require ROOT_DIR + '/spec/spec_helper'
 
 describe SexItUp::SexItUpImage, '#find_all' do
 

@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14caa7ed-9d0d-4a7a-b994-4ab069add87d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VERSION" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autotest/discover.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/spec.opts" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sex_it_up.iml" afterPath="$PROJECT_DIR$/.idea/sex_it_up.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generators/sex_it_up/templates/sex_it_up_migration.rb.erb" afterPath="$PROJECT_DIR$/generators/sex_it_up/templates/sex_it_up_migration.rb.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/sex_it_up.rb" afterPath="$PROJECT_DIR$/lib/sex_it_up.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb" afterPath="$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/sex_it_up_spec.rb" afterPath="$PROJECT_DIR$/spec/sex_it_up_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
     </list>
     <ignored path="sex_it_up.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +33,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="spec_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="-6.6666665">
+            <state line="10" column="54" selection-start="371" selection-end="371" vertical-scroll-proportion="0.3021148">
               <folding />
             </state>
           </provider>
@@ -49,7 +45,7 @@
       <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="72" selection-start="742" selection-end="742" vertical-scroll-proportion="-10.37037">
+            <state line="12" column="58" selection-start="290" selection-end="290" vertical-scroll-proportion="-8.444445">
               <folding />
             </state>
           </provider>
@@ -58,7 +54,7 @@
       <file leaf-file-name="sex_it_up_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/sex_it_up_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="59" selection-start="779" selection-end="779" vertical-scroll-proportion="-14.814815">
+            <state line="6" column="16" selection-start="228" selection-end="228" vertical-scroll-proportion="-4.4444447">
               <folding />
             </state>
           </provider>
@@ -67,7 +63,7 @@
       <file leaf-file-name="sex_it_up_image_factory.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="31" selection-start="16" selection-end="31" vertical-scroll-proportion="-0.0">
+            <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.7407407">
               <folding />
             </state>
           </provider>
@@ -82,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sex_it_up.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sex_it_up.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/sex_it_up.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="18" selection-start="54" selection-end="54" vertical-scroll-proportion="0.06163328">
+            <state line="3" column="20" selection-start="83" selection-end="83" vertical-scroll-proportion="-2.2222223">
               <folding />
             </state>
           </provider>
@@ -94,7 +90,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="-6.6666665">
+            <state line="8" column="18" selection-start="228" selection-end="228" vertical-scroll-proportion="-5.9259257">
               <folding />
             </state>
           </provider>
@@ -103,7 +99,7 @@
       <file leaf-file-name="README.rdoc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+            <state line="13" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="-9.62963">
               <folding />
             </state>
           </provider>
@@ -149,15 +145,15 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/build.sh" />
         <option value="$PROJECT_DIR$/VERSION" />
-        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/autotest/discover.rb" />
         <option value="$PROJECT_DIR$/generators/sex_it_up/templates/sex_it_up_migration.rb.erb" />
         <option value="$PROJECT_DIR$/spec/factories/sex_it_up_images_factory.rb" />
-        <option value="$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb" />
-        <option value="$PROJECT_DIR$/spec/sex_it_up_spec.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/lib/sex_it_up.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
+        <option value="$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb" />
+        <option value="$PROJECT_DIR$/spec/sex_it_up_spec.rb" />
       </list>
     </option>
   </component>
@@ -503,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.rdoc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generators/sex_it_up/sex_it_up_generator.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="45" selection-start="224" selection-end="224" vertical-scroll-proportion="0.147929">
@@ -517,37 +506,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.rdoc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="-9.62963">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="-6.6666665">
+        <state line="8" column="18" selection-start="228" selection-end="228" vertical-scroll-proportion="-5.9259257">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+    <entry file="file://$PROJECT_DIR$/lib/sex_it_up.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="-6.6666665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="72" selection-start="742" selection-end="742" vertical-scroll-proportion="-10.37037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/sex_it_up_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="59" selection-start="779" selection-end="779" vertical-scroll-proportion="-14.814815">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="31" selection-start="16" selection-end="31" vertical-scroll-proportion="0.0">
+        <state line="3" column="20" selection-start="83" selection-end="83" vertical-scroll-proportion="-2.2222223">
           <folding />
         </state>
       </provider>
@@ -559,9 +534,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/sex_it_up.rb">
+    <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="54" selection-end="54" vertical-scroll-proportion="0.06163328">
+        <state line="12" column="58" selection-start="290" selection-end="290" vertical-scroll-proportion="-8.444445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.7407407">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/sex_it_up_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="228" selection-end="228" vertical-scroll-proportion="-4.4444447">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="54" selection-start="371" selection-end="371" vertical-scroll-proportion="0.3021148">
           <folding />
         </state>
       </provider>

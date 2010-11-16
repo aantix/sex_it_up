@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'paperclip'
-require 'rails'
+require 'active_record'
+require 'action_view'
 
 module SexItUp
 
