@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14caa7ed-9d0d-4a7a-b994-4ab069add87d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sex_it_up.iml" afterPath="$PROJECT_DIR$/.idea/sex_it_up.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/initializers/paperclip.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/sex_it_up.rb" afterPath="$PROJECT_DIR$/lib/sex_it_up.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb" afterPath="$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/sex_it_up_spec.rb" afterPath="$PROJECT_DIR$/spec/sex_it_up_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
     </list>
     <ignored path="sex_it_up.iws" />
@@ -54,16 +50,25 @@
       <file leaf-file-name="sex_it_up_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/sex_it_up_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="67" selection-end="115" vertical-scroll-proportion="-1.4814814">
+            <state line="2" column="38" selection-start="153" selection-end="153" vertical-scroll-proportion="-1.4814814">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sex_it_up_image_factory.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="paperclip.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/initializers/paperclip.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="-9.62963">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sex_it_up_image_factory.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="9" selection-start="290" selection-end="290" vertical-scroll-proportion="0.092449926">
+            <state line="3" column="9" selection-start="290" selection-end="290" vertical-scroll-proportion="-2.2222223">
               <folding />
             </state>
           </provider>
@@ -72,7 +77,7 @@
       <file leaf-file-name="sex_it_up.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/sex_it_up.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="28" selection-start="383" selection-end="383" vertical-scroll-proportion="-11.851851">
+            <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="-2.9629629">
               <folding />
             </state>
           </provider>
@@ -87,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="spec_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="-2.5555556">
+            <state line="13" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.39274925">
               <folding />
             </state>
           </provider>
@@ -130,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/README.rdoc" />
         <option value="$PROJECT_DIR$/lib/tasks/sex_it_up.rb" />
         <option value="$PROJECT_DIR$/generators/sex_it_up/sex_it_up_generator.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -140,12 +144,13 @@
         <option value="$PROJECT_DIR$/generators/sex_it_up/templates/sex_it_up_migration.rb.erb" />
         <option value="$PROJECT_DIR$/spec/factories/sex_it_up_images_factory.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
-        <option value="$PROJECT_DIR$/spec/sex_it_up_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$USER_HOME$/.rvm/gems/ruby-1.9.2-p0@rails3/gems/paperclip-2.3.5/lib/paperclip/railtie.rb" />
-        <option value="$PROJECT_DIR$/lib/sex_it_up.rb" />
         <option value="$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb" />
+        <option value="$PROJECT_DIR$/spec/sex_it_up_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/paperclip.rb" />
+        <option value="$PROJECT_DIR$/lib/sex_it_up.rb" />
+        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
       </list>
     </option>
   </component>
@@ -204,6 +209,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sex_it_up" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sex_it_up" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="initializers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -456,11 +479,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="1.1479028" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VERSION">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
@@ -508,13 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="-2.5555556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="58" selection-start="511" selection-end="511" vertical-scroll-proportion="-10.555555">
@@ -529,13 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.2-p0@rails3/gems/paperclip-2.3.5/lib/paperclip.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="8" selection-start="2864" selection-end="2864" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.2-p0@rails3/gems/paperclip-2.3.5/lib/paperclip/railtie.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="31" selection-start="260" selection-end="260" vertical-scroll-proportion="0.2322206">
@@ -543,23 +547,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/sex_it_up.rb">
+    <entry file="file://$PROJECT_DIR$/spec/sex_it_up_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="28" selection-start="383" selection-end="383" vertical-scroll-proportion="-11.851851">
+        <state line="2" column="38" selection-start="153" selection-end="153" vertical-scroll-proportion="-1.4814814">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/sex_it_up_spec.rb">
+    <entry file="file://$PROJECT_DIR$/spec/initializers/paperclip.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="67" selection-end="115" vertical-scroll-proportion="-1.4814814">
+        <state line="13" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="-9.62963">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/factories/sex_it_up_image_factory.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="9" selection-start="290" selection-end="290" vertical-scroll-proportion="0.092449926">
+        <state line="3" column="9" selection-start="290" selection-end="290" vertical-scroll-proportion="-2.2222223">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/sex_it_up.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="-2.9629629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.2-p0@rails3/gems/paperclip-2.3.5/lib/paperclip.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="8" selection-start="2864" selection-end="2864" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.39274925">
           <folding />
         </state>
       </provider>

@@ -9,7 +9,6 @@ Paperclip::Railtie.insert
 module SexItUp
 
   class SexItUpImage < ActiveRecord::Base
-    #include Paperclip
 
     attr_reader :sizes
     puts "before has_attached"

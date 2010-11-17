@@ -9,6 +9,8 @@ require 'active_record'
 require 'active_support'
 require 'logger'
 
+require 'initializers/paperclip'
+
 gem 'sqlite3-ruby'
 
 DB = '/tmp/jobs.sqlite'
