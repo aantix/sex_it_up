@@ -2,6 +2,8 @@ require 'rubygems'
 require 'paperclip'
 require 'active_record'
 require 'action_view'
+require 'google-search'
+require 'mechanize'
 
 Paperclip.configure
 Paperclip::Railtie.insert
@@ -9,11 +11,10 @@ Paperclip::Railtie.insert
 module SexItUp
 
   class SexItUpImage < ActiveRecord::Base
+    RESULT_LIMIT = 3
 
     attr_reader :sizes
-    puts "before has_attached"
     has_attached_file :image, :styles => Proc.new { |i| i.instance.attachment_sizes }
-    puts "after has_attached"
 
     # Want to give each user a unique avatar?  Assign their profile image to the image returned here.
     def self.find_all(term)
@@ -32,17 +33,23 @@ module SexItUp
 
     private
     def self.cache_search(query)
-      images = []
+      images      = []
+      num_results = 0
+
       Google::Search::Web.new(:query => query).each do |result|
         page        = agent.get(result.uri)
         image       = find_image_link(page)
 
-        images << cache(query, image)
+        images << cache(query, image.href) unless image.nil?
+
+        num_results+=1
+        break if num_results == RESULT_LIMIT
       end
 
+      images
     end
 
-    def find_image_link(page)
+    def self.find_image_link(page)
       page.links.detect {|link| link.href =~ /http:\/\/upload.wikimedia.org\/wikipedia\/commons\/\w\// }
     end
 
@@ -55,7 +62,7 @@ module SexItUp
 
     def self.cache(search_term, img_url)
       # No need to re-retrieve file if already done so
-      image = find_by_original_image_url(img_url)
+      image = find_by_image_original_url(img_url)
       return image unless image.nil?
 
       image = open img_url

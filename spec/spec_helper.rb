@@ -16,6 +16,8 @@ gem 'sqlite3-ruby'
 DB = '/tmp/jobs.sqlite'
 
 File.delete(DB) rescue nil
+FileUtils.rm_rf('public')
+
 ActiveRecord::Base.logger = Logger.new('/tmp/sex_it_up.log')
 ActiveRecord::Base.establish_connection(:adapter => 'sqlite3', :database => DB)
 
