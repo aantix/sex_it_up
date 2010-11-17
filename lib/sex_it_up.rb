@@ -3,21 +3,32 @@ require 'paperclip'
 require 'active_record'
 require 'action_view'
 
+Paperclip.configure
+Paperclip::Railtie.insert
+
 module SexItUp
 
   class SexItUpImage < ActiveRecord::Base
-    include Paperclip::Glue
+    #include Paperclip
 
     attr_reader :sizes
-    has_attached_file :image, :styles => Proc.new { |instance| instance.attachment_sizes }
-    after_create  :reprocess
-    after_destroy :reprocess
-
+    puts "before has_attached"
+    has_attached_file :image, :styles => Proc.new { |i| i.instance.attachment_sizes }
+    puts "after has_attached"
 
     # Want to give each user a unique avatar?  Assign their profile image to the image returned here.
     def self.find_all(term)
       query = "site:commons.wikimedia.org \"is in the public domain\" #{term}"
       cache_search(query)
+    end
+
+    def attachment_sizes
+      sizes = {:thumb => ["100x100"]}
+#      self.sizes.each do |size|
+#        sizes[:"#{size.id}"] = ["#{size.width}x#{size.height}"]
+#      end
+
+      sizes
     end
 
     private
@@ -53,16 +64,6 @@ module SexItUp
                           :image_search_term => search_term,
                           :image => image)
     end
-
-    def attachment_sizes
-      sizes = {:thumb => ["100x100"]}
-      self.sizes.each do |size|
-        sizes[:"#{size.id}"] = ["#{size.width}x#{size.height}"]
-      end
-
-      sizes
-    end
-
 
 #    def reprocess
 #      self.image.reprocess!
