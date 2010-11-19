@@ -71,26 +71,22 @@ module SexItUp
                           :image => image)
     end
 
-#    def reprocess
-#      self.image.reprocess!
-#    end
-
   end
 
 
-  module SexItUpViewHelper
+  module SexItUpHelper
 
     # Searches wikimedia for passed in term.  Caches all initial results.
     #  As you search through results, image files will generally follow the form e.g. "File:<image name>.jpg - Wikimedia Commons"
     # Retains the original image and will generate scaled versions based on coordinates passed in
     # Allow for an optional watermark that defaults to the text "Placeholder"
     def sexy_image(term, opts = {})
-
-       image_tag
+       #image_tag
+      'yes'
     end
 
   end
 
 end
 
-ActionView::Base.send :include, SexItUp::SexItUpViewHelper
+ActionView::Base.send :include, SexItUp::SexItUpHelper
