@@ -13,7 +13,7 @@ require 'initializers/paperclip'
 
 gem 'sqlite3-ruby'
 
-DB = '/tmp/jobs.sqlite'
+DB = '/tmp/sex_it_up.sqlite'
 
 # Delete the db if exists so we have a clean slate to run against.
 File.delete(DB) rescue nil

@@ -3,6 +3,10 @@ ROOT_DIR = `pwd`.strip unless defined? ROOT_DIR
 require ROOT_DIR + '/spec/spec_helper'
 
 describe SexItUp::SexItUpImage, '#find_all' do
+  before(:all) do
+    # Start with a clean slate
+    SexItUp::SexItUpImage.delete_all
+  end
 
   it "shouldn't have any images cached" do
     SexItUp::SexItUpImage.all.should have(0).things
