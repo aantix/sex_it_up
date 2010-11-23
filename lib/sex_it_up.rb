@@ -25,13 +25,11 @@ module SexItUp
 
     # Want to give each user a unique avatar?  Assign their profile image to the image returned here.
     def self.find_all(term)
-      puts "Querying....."
       query = "site:commons.wikimedia.org \"is in the public domain\" #{term}"
       cache_search(query, term)
     end
 
     def set_attachment_sizes(sizes = {:thumb => ["100x100"]})
-      puts "attachment_sizes = #{sizes.inspect}"
       @sizes = sizes
     end
 
@@ -44,13 +42,9 @@ module SexItUp
       images      = []
       num_results = 0
 
-      puts "Caching results..."
       Google::Search::Web.new(:query => query).each do |result|
-        puts "Result : [#{result.uri}]"
         page        = agent.get(result.uri)
         image       = find_image_link(page)
-
-        puts "image = #{image.inspect}"
 
         images << cache(term, image.href) unless image.nil?
 
@@ -73,14 +67,15 @@ module SexItUp
     end
 
     def self.cache(search_term, img_url)
-      puts "-- img_url = #{img_url}"
-
       # No need to re-retrieve file if already done so
       image = find_by_image_original_url(img_url)
       return image unless image.nil?
 
       #image = open img_url
       image = open(URI.parse(img_url))
+
+      # The original_filename passed in from a file open is unintelligible;
+      #   change it to something better. Feels 'dirty' but admittance is the first step.
       def image.original_filename; base_uri.path.split('/').last; end
       image.original_filename.blank? ? nil : image
 
@@ -93,15 +88,19 @@ module SexItUp
 
 
   module SexItUpHelper
-    include ActionView::Helpers::AssetTagHelper
-
     # Pass in a search term (e.g. 'dogs') and the resolution you
     #  want the image to be displayed at.
     def sexy_image(term, opts = {:width => 100, :height => 100})
-      sexy_image      = SexItUpImage.where(['image_search_term = ?', term]).random.first
 
-      if sexy_image.nil? || sexy_image.empty?
-        # No images for a given term; let's go find some.
+      # The loving is a mess, what happened to all of the feeling?
+      # I thought it was for real; babies, rings and fools kneeling
+      # And words of pledging trust and lifetimes stretching forever
+      # So what went wrong? It was a lie, it crumbled apart
+      # Ghost figures of past, present, future haunting the heart
+      sexy_image = term.class == SexItUp::SexItUpImage ? term : SexItUpImage.where(['image_search_term = ?', term]).random.first
+
+      if sexy_image.nil? || sexy_image.blank?
+        # No image object passed in or found; let's go search.
 
         SexItUpImage.find_all(term)
         sexy_image = SexItUpImage.where(['image_search_term = ?', term]).random.first
@@ -113,10 +112,16 @@ module SexItUp
         style_hash      = {style_sym => [style]}
 
         sexy_image.set_attachment_sizes(style_hash)
-        sexy_image.image.reprocess! # unless File.exist?(sexy_image.image.path(style_sym))
+        sexy_image.image.reprocess! unless File.exist?(sexy_image.image.path(style_sym))
 
-        return sexy_image.image.url(style_sym)
-        #return image_tag(sexy_image.image.url(style.to_sym))
+        tag = "<img"
+        tag += " class=\"#{opts[:class]}\"" if opts[:class]
+        tag += " src=\"#{sexy_image.image.url(style_sym)}\""
+        tag += " alt=\"#{opts[:alt]}\"" if opts[:alt]
+        tag += " title=\"#{opts[:title]}\"" if opts[:title]
+        tag += " />"
+
+        return tag
       end
 
       nil
