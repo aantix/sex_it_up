@@ -1,4 +1,4 @@
-class SexItUpGenerator < Rails::Generator::Base
+class SexItUpGenerator < Rails::Generator::NameBase
 
   def manifest
     record do |m|

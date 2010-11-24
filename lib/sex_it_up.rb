@@ -13,7 +13,7 @@ Paperclip::Railtie.insert
 module SexItUp
 
   class SexItUpImage < ActiveRecord::Base
-    RESULT_LIMIT = 3
+    RESULT_LIMIT = 10
 
     scope :random, lambda {
       max_id  = connection.select_value("select max(id) from #{self.table_name}")
@@ -112,7 +112,7 @@ module SexItUp
         style_hash      = {style_sym => [style]}
 
         sexy_image.set_attachment_sizes(style_hash)
-        sexy_image.image.reprocess! unless File.exist?(sexy_image.image.path(style_sym))
+        sexy_image.image.reprocess! unless File.exist?(sexy_image.image.path(style_sym)) # No need for reprocessing if size already exists
 
         tag = "<img"
         tag += " class=\"#{opts[:class]}\"" if opts[:class]

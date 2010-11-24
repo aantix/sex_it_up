@@ -13,13 +13,16 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
 	gem.name = "sex_it_up"
 	gem.summary = %Q{Replace your boring place-holder images with beautiful public domain images of history's greatest artwork and sculptures.}
-	gem.description = %Q{TODO: longer description of your gem}
+	gem.description = %Q{SexItUp allows for the easy drop-in of public domain images for site mockups and user avatars.}
 	gem.email = "jjones@aantix.com"
 	gem.homepage = "http://github.com/aantix/sex_it_up"
 	gem.authors = ["Jim Jones"]
+	gem.require_path = 'lib'
+    gem.version = "1.0.0"
 	gem.add_development_dependency "paperclip", ">= 2.3.5"
 	gem.add_development_dependency "mechanize", ">= 1.0.0"
 	gem.add_development_dependency "google-search", ">= 1.0.2"
+    gem.files = %w(MIT-LICENSE README.textile Rakefile init.rb) + Dir.glob("{generators,lib,spec}/**/*")
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -41,7 +44,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "test-gem #{version}"
+  rdoc.title = "sex_it_up #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
