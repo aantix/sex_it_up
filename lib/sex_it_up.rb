@@ -76,7 +76,7 @@ module SexItUp
 
       # The original_filename passed in from a file open is unintelligible;
       #   change it to something better. Feels 'dirty' but admittance is the first step.
-      def image.original_filename; base_uri.path.split('/').last; end
+      def image.original_filename; CGI.unescape(base_uri.path.split('/').last); end
       image.original_filename.blank? ? nil : image
 
       SexItUpImage.create!(:image_original_url => img_url,
