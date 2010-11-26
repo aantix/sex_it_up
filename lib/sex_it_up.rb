@@ -121,7 +121,7 @@ module SexItUp
         tag += " title=\"#{opts[:title]}\"" if opts[:title]
         tag += " />"
 
-        return tag
+        return tag.html_safe
       end
 
       nil

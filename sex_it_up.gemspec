@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jim Jones"]
-  s.date = %q{2010-11-24}
+  s.date = %q{2010-11-26}
   s.description = %q{SexItUp allows for the easy drop-in of public domain images for site mockups and user avatars.}
   s.email = %q{jjones@aantix.com}
   s.extra_rdoc_files = [
@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "Rakefile",
-    "generators/sex_it_up/sex_it_up_generator.rb",
-    "generators/sex_it_up/templates/sex_it_up_migration.rb.erb",
+    "lib/generators/sex_it_up/sex_it_up_generator.rb",
+    "lib/generators/sex_it_up/templates/sex_it_up_migration.rb",
     "lib/sex_it_up.rb",
     "lib/tasks/sex_it_up.rb",
     "spec/factories/Plato_and_Aristotle_in_The_School_of_Athens,_by_italian_Rafael.jpg",
