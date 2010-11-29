@@ -12,7 +12,7 @@ describe SexItUp::SexItUpHelper do
 
   describe "sexy_image" do
     it "should source a random image for the search term and size it accordingly" do
-      sexy_image('school', {:width => 50, :height => 50}).should =~ /.jpg/
+      sexy_image('school', {:width => 50, :height => 50}).should =~ /.jpg/i
       sexy_image('school', {:width => 50, :height => 50}).should =~ /s_50x50/
     end
 

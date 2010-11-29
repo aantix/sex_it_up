@@ -1,25 +1,42 @@
 == Description
-Turn your boring "Lorem ipsum" website and placeholder images into a beautiful display of artwork.
+Turn your boring demo website and placeholder images into a beautiful display of artwork.
 
-== View Helper
-# Searches wikimedia for passed in term.  Caches all initial results.
-#  As you search through results, image files will generally follow the form e.g. "File:<image name>.jpg - Wikimedia Commons"
-# Retains the original image and will generate scaled versions based on coordinates passed in
-# Allow for an optional watermark that defaults to the text "Placeholder"
-sexy_image('dogs', :width => 100, :height => 100)
+In your Gemfile, add the following :
+    gem "sex_it_up", ">= 1.0.0"
 
+Then perform the following from the root of your application directory :
 
-== Model
-# If you want to replace your boring user place holder image, you can do the following
-user.icon = SexItUp.sexy_image(['flowers','stars','butterflies'], :width => 75, :height => 75)
+    bundle install
 
-== Rake Task
-# The inital caching of images for a given term may be slow (hence causing your initial page view to be slow), so you can "pre-warm" the image
-#  cache for a given search term by using the following rake task.
-rake sex_it_up:cache butterflies
+Now we need to copy over the needed migration :
+    rails g sex_it_up
+    rake db:migrate
 
-# Show Lovdbyless or some other social site with a before (with boring placeholders) and after (with exciting images)
-# Show a screenshot of a sample site with the Lorem text and placeholder images
+== Displaying Images
+
+If you want to display a random image for the term 'dog', do the following.
+
+Add the following to your Rakefile :
+    require 'tasks/sex_it_up'
+
+Once you have the rake task available, you can issue the following to warm the image cache for a given term :
+    rake sex_it_up:cache[<Term>]
+
+    e.g. :
+    rake sex_it_up:cache["dog"]
+
+Once the rake task has completed, change your erb view to call the following helper :
+    sexy_image('dog', :width => 100, :height => 100)
+
+This helper will find a random image for the given term, scale it to the passed in dimensions, and display it.
+
+== Other Uses
+If you wanted to replace your boring default user avatars, you could do the following
+    user.icon = SexItUp::SexItUpImage.find_all('dog').random.first
+
+== Sample Screenshot
+![Sample website using SexItUp](http://imgur.com/bmHvj.png)
+
 == Copyright
 
 Copyright (c) 2010 Jim Jones. See LICENSE for details.

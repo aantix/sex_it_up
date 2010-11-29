@@ -15,6 +15,10 @@ module SexItUp
   class SexItUpImage < ActiveRecord::Base
     RESULT_LIMIT = 10
 
+    scope :images_for, lambda {|term|
+      where(['image_search_term = ?', term])
+    }
+
     scope :random, lambda {
       max_id  = connection.select_value("select max(id) from #{self.table_name}")
       where("id >= #{rand(max_id)}")
@@ -27,6 +31,7 @@ module SexItUp
     def self.find_all(term)
       query = "site:commons.wikimedia.org \"is in the public domain\" #{term}"
       cache_search(query, term)
+      images_for(term)
     end
 
     def set_attachment_sizes(sizes = {:thumb => ["100x100"]})
@@ -39,20 +44,18 @@ module SexItUp
 
     private
     def self.cache_search(query, term)
-      images      = []
       num_results = 0
 
       Google::Search::Web.new(:query => query).each do |result|
         page        = agent.get(result.uri)
         image       = find_image_link(page)
 
-        images << cache(term, image.href) unless image.nil?
+        cache(term, image.href) unless image.nil?
 
         num_results+=1
         break if num_results == RESULT_LIMIT
       end
 
-      images
     end
 
     def self.find_image_link(page)
@@ -79,9 +82,10 @@ module SexItUp
       def image.original_filename; CGI.unescape(base_uri.path.split('/').last); end
       image.original_filename.blank? ? nil : image
 
-      SexItUpImage.create!(:image_original_url => img_url,
-                           :image_search_term => search_term,
-                           :image => image)
+      # Any sort of failure on record creation is probably a file format not supported (e.g. .ogg)
+      SexItUpImage.create(:image_original_url => img_url,
+                          :image_search_term => search_term,
+                          :image => image)
     end
 
   end
@@ -102,8 +106,7 @@ module SexItUp
       if sexy_image.nil? || sexy_image.blank?
         # No image object passed in or found; let's go search.
 
-        SexItUpImage.find_all(term)
-        sexy_image = SexItUpImage.where(['image_search_term = ?', term]).random.first
+        sexy_image = SexItUpImage.find_all(term).random.first
       end
 
       unless sexy_image.nil?
