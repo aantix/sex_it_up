@@ -14,12 +14,10 @@ Now we need to copy over the needed migration :
 
 == Displaying Images
 
-If you want to display a random image for the term 'dog', do the following.
-
-Add the following to your Rakefile :
+If you want to display a random image for the term 'dog', first add the following to your Rakefile :
     require 'tasks/sex_it_up'
 
-Once you have the rake task available, you can issue the following to warm the image cache for a given term :
+Once you have the rake task available, you can issue the following rake command to warm the image cache for a given term :
     rake sex_it_up:cache[<Term>]
 
     e.g. :
@@ -35,7 +33,7 @@ If you wanted to replace your boring default user avatars, you could do the foll
     user.icon = SexItUp::SexItUpImage.find_all('dog').random.first
 
 == Sample Screenshot
-![Sample website using SexItUp](http://imgur.com/bmHvj.png)
+[http://imgur.com/bmHvj.png]
 
 == Copyright
 
