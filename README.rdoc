@@ -35,7 +35,7 @@ If you wanted to replace your boring default user avatars, you could do the foll
 == Sample Screenshot
 http://i.imgur.com/bmHvj.png
 
-{Screenshot #2}(http://imgur.com/cJqZd/)
+{Screenshot #2}[http://imgur.com/cJqZd/]
 
 == Copyright
 
