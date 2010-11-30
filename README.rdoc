@@ -32,11 +32,10 @@ This helper will find a random image for the given term, scale it to the passed 
 If you wanted to replace your boring default user avatars, you could do the following
     user.icon = SexItUp::SexItUpImage.find_all('dog').random.first
 
-== Screenshot #1
+== Sample Screenshot
 http://i.imgur.com/bmHvj.png
 
-== Screenshot #2
-http://imgur.com/cJqZd.png
+[Screenshot #2](http://imgur.com/cJqZd.png)
 
 == Copyright
 
