@@ -49,7 +49,7 @@ module SexItUp
       Google::Search::Web.new(:query => query).each do |result|
         page        = agent.get(result.uri)
         image       = find_image_link(page)
-
+        
         cache(term, image.href) unless image.nil?
 
         num_results+=1
@@ -59,7 +59,7 @@ module SexItUp
     end
 
     def self.find_image_link(page)
-      page.links.detect {|link| link.href =~ /http:\/\/upload.wikimedia.org\/wikipedia\/commons\/\w\// }
+      page.links.detect {|link| link.href =~ /upload.wikimedia.org\/wikipedia\/commons\/\w\/(.)+(.jpg|.png|.jpeg)$/i}
     end
 
     def self.agent
@@ -70,11 +70,14 @@ module SexItUp
     end
 
     def self.cache(search_term, img_url)
+      # Some urls are only prefixed with a double slash, excluding the protocol
+      #  This causes an exception with the URI parse
+      img_url.gsub!(/^\/+/,'http://')
+      
       # No need to re-retrieve file if already done so
       image = find_by_image_original_url(img_url)
       return image unless image.nil?
 
-      #image = open img_url
       image = open(URI.parse(img_url))
 
       # The original_filename passed in from a file open is unintelligible;

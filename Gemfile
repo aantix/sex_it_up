@@ -1,3 +1,5 @@
+source :rubygems
+
 gem "activerecord", ">= 3.0.1"
 gem "actionpack", ">= 3.0.1"
 gem "paperclip", ">= 2.3.5"

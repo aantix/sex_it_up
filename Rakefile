@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
 	gem.homepage = "http://github.com/aantix/sex_it_up"
 	gem.authors = ["Jim Jones"]
 	gem.require_path = 'lib'
-    gem.version = "1.0.0"
+    gem.version = "1.1.0"
 	gem.add_development_dependency "paperclip", ">= 2.3.5"
 	gem.add_development_dependency "mechanize", ">= 1.0.0"
 	gem.add_development_dependency "google-search", ">= 1.0.2"
