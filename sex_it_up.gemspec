@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "sex_it_up"
+  s.name = %q{sex_it_up}
   s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jim Jones"]
-  s.date = "2011-12-27"
-  s.description = "SexItUp allows for the easy drop-in of public domain images for site mockups and user avatars."
-  s.email = "jjones@aantix.com"
+  s.date = %q{2011-12-27}
+  s.description = %q{SexItUp allows for the easy drop-in of public domain images for site mockups and user avatars.}
+  s.email = %q{jjones@aantix.com}
   s.extra_rdoc_files = [
     "LICENSE",
     "README.rdoc"
@@ -30,10 +30,10 @@ Gem::Specification.new do |s|
     "spec/sex_it_up_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/aantix/sex_it_up"
+  s.homepage = %q{http://github.com/aantix/sex_it_up}
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.11"
-  s.summary = "Replace your boring place-holder images with beautiful public domain images of history's greatest artwork and sculptures."
+  s.rubygems_version = %q{1.3.7}
+  s.summary = %q{Replace your boring place-holder images with beautiful public domain images of history's greatest artwork and sculptures.}
   s.test_files = [
     "spec/factories/sex_it_up_image_factory.rb",
     "spec/helpers/sex_it_up_helper.rb",
@@ -44,6 +44,7 @@ Gem::Specification.new do |s|
   ]
 
   if s.respond_to? :specification_version then
+    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
