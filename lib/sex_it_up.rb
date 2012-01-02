@@ -19,11 +19,6 @@ module SexItUp
       where(['image_search_term = ?', term])
     }
 
-    scope :random, lambda {
-      max_id  = connection.select_value("select max(id) from #{self.table_name}")
-      where("id >= #{rand(max_id)}")
-    }
-
     attr_reader :sizes
     has_attached_file :image, :styles => Proc.new { |i| i.instance.attachment_sizes }
 
@@ -104,12 +99,13 @@ module SexItUp
       # And words of pledging trust and lifetimes stretching forever
       # So what went wrong? It was a lie, it crumbled apart
       # Ghost figures of past, present, future haunting the heart
-      sexy_image = term.class == SexItUp::SexItUpImage ? term : SexItUpImage.where(['image_search_term = ?', term]).random.first
+      sexy_image = term.is_a?(SexItUp::SexItUpImage) ? term : SexItUpImage.where(['image_search_term = ?', term]).random
 
       if sexy_image.nil? || sexy_image.blank?
+        puts "No image found.  Searching for #{term}."
         # No image object passed in or found; let's go search.
 
-        sexy_image = SexItUpImage.find_all(term).random.first
+        sexy_image = SexItUpImage.find_all(term).random
       end
 
       unless sexy_image.nil?

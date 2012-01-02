@@ -8,12 +8,25 @@ require 'factory_girl'
 require 'active_record'
 require 'active_support'
 require 'logger'
+require 'randumb'
 
 require 'initializers/paperclip'
 
 gem 'sqlite3-ruby'
 
 DB = '/tmp/sex_it_up.sqlite'
+
+def fixture path
+  File.read File.dirname(__FILE__) + "/fixtures/#{path}"
+end
+
+def json_fixture name
+  fixture("#{name}.json")
+end
+
+RSpec.configure do |config|
+  config.mock_with :mocha
+end
 
 # Delete the db if exists so we have a clean slate to run against.
 File.delete(DB) rescue nil
@@ -34,12 +47,6 @@ end
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 Dir["#{File.dirname(__FILE__)}/helpers/**/*.rb"].each {|f| require f}
 
-# Factories aren't autodiscovered in non-rails environments so have to
-#  explicitly find them.
-Factory.find_definitions
-
-RSpec.configure do |config|
-  config.mock_with :rspec
-end
+FactoryGirl.find_definitions
 
 

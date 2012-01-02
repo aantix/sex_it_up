@@ -1,3 +1,4 @@
+{<img src="https://secure.travis-ci.org/aantix/sex_it_up.png"/>}[https://secure.travis-ci.org/aantix/sex_it_up]
 == Description
 Turn your boring demo website and placeholder images into a beautiful display of artwork.
 
@@ -37,4 +38,4 @@ http://i.imgur.com/bmHvj.png
 
 == Copyright
 
-Copyright (c) 2010 Jim Jones. See LICENSE for details.
+Copyright (c) 2010-2012 Jim Jones. See LICENSE for details.
