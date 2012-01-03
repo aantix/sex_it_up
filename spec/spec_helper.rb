@@ -42,9 +42,6 @@ ActiveRecord::Schema.define(:version => 1) do
   load(File.dirname(__FILE__) + '/schema.rb')
 end
 
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 Dir["#{File.dirname(__FILE__)}/helpers/**/*.rb"].each {|f| require f}
 
 FactoryGirl.find_definitions

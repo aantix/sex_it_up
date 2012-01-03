@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('mechanize',">= 1.0.0")
   s.add_runtime_dependency('google-search',">= 1.0.2")
   s.add_runtime_dependency('randumb')
-  s.add_development_dependency('factory_girl',"= 1.3.2")
+  s.add_development_dependency('factory_girl')
   s.add_development_dependency('rspec-rails')
   s.add_development_dependency('mocha')
   s.add_development_dependency('bundler',"~> 1.0.0")
